@@ -156,20 +156,36 @@
     .then(function (text) {
       var rows = parseCSV(text);
       // ヘッダー名で列位置を特定（フォーム回答シートの「タイムスタンプ」列や列順変更に対応）
-      // 部分一致で認識（フォームの質問名が「開催日 日付」等でもOK）。リンク文言→リンクURLの順で誤マッチを防ぐ
-      var KEYS = [['linkLabel', 'リンク文言'], ['url', 'リンクURL'], ['date', '日付'], ['title', 'タイトル'], ['venue', '会場'], ['time', '時間'], ['cast', '出演'], ['guest', 'Guest'], ['price', '料金'], ['note', 'その他']];
+      // ヘッダーを同義語の部分一致で認識（フォームの質問名「開催日」「イベントタイトル」「ゲスト」等にも対応）。
+      // リンク文言→リンクURLの順で誤マッチを防ぐ
+      var KEYS = [
+        ['linkLabel', ['リンク文言', '文言']],
+        ['url', ['リンクURL', 'URL', 'url']],
+        ['date', ['日付', '開催日']],
+        ['title', ['タイトル']],
+        ['venue', ['会場']],
+        ['time', ['時間']],
+        ['cast', ['出演']],
+        ['guest', ['Guest', 'guest', 'ゲスト']],
+        ['price', ['料金']],
+        ['note', ['その他', '備考']]
+      ];
       var head = rows[0] || [];
       var idx = {};
       var used = {};
       for (var k = 0; k < KEYS.length; k++) {
-        for (var h = 0; h < head.length; h++) {
-          if (used[h]) continue;
-          if ((head[h] || '').indexOf(KEYS[k][1]) !== -1) { idx[KEYS[k][0]] = h; used[h] = true; break; }
+        outer:
+        for (var s = 0; s < KEYS[k][1].length; s++) {
+          for (var h = 0; h < head.length; h++) {
+            if (used[h]) continue;
+            if ((head[h] || '').indexOf(KEYS[k][1][s]) !== -1) { idx[KEYS[k][0]] = h; used[h] = true; break outer; }
+          }
         }
       }
       if (idx.date === undefined || idx.title === undefined) {
-        // ヘッダーが見つからない場合は従来の A〜J 並び
-        idx = { date: 0, title: 1, venue: 2, url: 3, linkLabel: 4, time: 5, cast: 6, guest: 7, price: 8, note: 9 };
+        // ヘッダーが認識できない場合：タイムスタンプ列があれば B〜K、なければ A〜J の並びで読む
+        var off = ((head[0] || '').indexOf('タイムスタンプ') !== -1 || /timestamp/i.test(head[0] || '')) ? 1 : 0;
+        idx = { date: off, title: off + 1, venue: off + 2, url: off + 3, linkLabel: off + 4, time: off + 5, cast: off + 6, guest: off + 7, price: off + 8, note: off + 9 };
       }
       function col(c, k) { return idx[k] === undefined ? '' : (c[idx[k]] || '').trim(); }
       var events = [];
