@@ -20,6 +20,7 @@ _backup/
 ジャケット/
 studio-oto-final-assets/
 studio-oto-final-assets.zip
+/スケジュール雛形.csv
 # 壊れた未使用ファイル（使用中は studio-oto-wm.webp の方）
 public/uploads/studio-oto-wordmark.webp
 /index.html
