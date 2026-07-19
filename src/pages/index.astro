@@ -12,6 +12,9 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="/uploads/IMG_3149.JPG">
 
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -58,7 +61,7 @@ html{scroll-behavior:smooth}
 body{margin:0;font-family:'Hanken Grotesk','Zen Kaku Gothic New',sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 a{color:inherit;text-decoration:none}
 img{max-width:100%}
-.eb{font-size:11.5px;font-weight:600;letter-spacing:.22em}
+.eb{font-size:17px;font-weight:700;letter-spacing:.22em}
 .zk{font-family:'Zen Kaku Gothic New',sans-serif}
 @keyframes yjIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 
@@ -146,7 +149,7 @@ a{transition:background var(--duration-fast) var(--ease-standard),color var(--du
 <div style="width:100%;overflow-x:clip;background:#fff">
 
 <nav style="position:sticky;top:0;z-index:50;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:var(--surface-glass);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--border-subtle)" class="yj-pad">
-  <a href="#top" class="zk" style="font-weight:700;font-size:18px;letter-spacing:.04em;color:var(--ink)">Yuji Namatame</a>
+  <a href="#top" aria-label="studio OTO ホーム" style="display:block;position:relative;width:164px;height:26px;overflow:hidden"><img src="/uploads/studio-oto-wm.webp" alt="studio OTO" style="position:absolute;top:50%;left:50%;height:95px;width:auto;transform:translate(-50%,-50%);display:block"></a>
   <input type="checkbox" id="nav-toggle" class="yj-nav-toggle" aria-hidden="true">
   <label for="nav-toggle" class="yj-burger" aria-label="メニュー">
     <svg class="ic-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M3 12h18"></path><path d="M3 18h18"></path></svg>
@@ -208,8 +211,7 @@ a{transition:background var(--duration-fast) var(--ease-standard),color var(--du
 
 <section id="media" class="yj-sec yj-pad" style="padding:104px 48px;background:var(--gray-50);border-top:1px solid var(--border-subtle);scroll-margin-top:72px">
   <div style="margin-bottom:40px">
-    <div class="eb" style="color:var(--accent);margin-bottom:14px">MEDIA</div>
-    <p style="margin:0;font-size:16px;line-height:1.9;color:var(--gray-600);max-width:38em">演奏・出演動画を YouTube でご覧いただけます。</p>
+    <div class="eb" style="color:var(--accent)">MEDIA</div>
   </div>
   <div class="yj-2col" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 28px">
     <div>
@@ -239,8 +241,7 @@ a{transition:background var(--duration-fast) var(--ease-standard),color var(--du
   </div>
   <div style="margin-top:64px;padding-top:48px;border-top:1px solid var(--border-subtle)">
     <div class="eb" style="color:var(--accent);margin-bottom:16px">RECORDING WORKS</div>
-    <h3 class="zk" style="margin:0 0 6px;font-weight:700;font-size:22px;line-height:1.4;color:var(--ink)">Studio OTO レコーディング実績</h3>
-    <p style="margin:0 0 28px;font-size:13.5px;line-height:1.8;color:var(--gray-500)">自宅スタジオ「Studio OTO」でレコーディング参加した作品の一部です。</p>
+    <h3 class="zk" style="margin:0 0 28px;font-weight:700;font-size:22px;line-height:1.4;color:var(--ink)">Studio OTO レコーディング実績</h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:30px 24px">
       <a href="https://music.apple.com/jp/album/1760270392" target="_blank" rel="noopener" style="display:block;text-decoration:none">
         <div style="aspect-ratio:1/1;overflow:hidden;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);background:var(--gray-100)"><img src="/uploads/jk_dejavu.jpg" alt="純烈「デジャビュ」（アルバム『純烈魂 1』）ジャケット" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
@@ -271,7 +272,7 @@ a{transition:background var(--duration-fast) var(--ease-standard),color var(--du
   </div>
 </section>
 
-<section id="services" class="yj-sec yj-pad" style="padding:104px 48px;text-align:center;border-top:1px solid var(--border-subtle);scroll-margin-top:72px">
+<section id="services" class="yj-sec yj-pad" style="padding:104px 48px;border-top:1px solid var(--border-subtle);scroll-margin-top:72px">
   <div class="eb" style="color:var(--accent);margin-bottom:48px">SERVICES</div>
   <div class="yj-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:48px;text-align:left">
     <div style="display:flex;flex-direction:column">
@@ -368,6 +369,7 @@ a{transition:background var(--duration-fast) var(--ease-standard),color var(--du
 </section>
 
 <footer id="follow" class="yj-pad" style="padding:64px 48px 46px;background:var(--ink);border-top:1px solid var(--border-inverse);display:flex;flex-direction:column;align-items:center;gap:26px;scroll-margin-top:72px">
+  <img src="/uploads/studio-oto-logo.webp" alt="studio OTO" width="96" height="96" loading="lazy" decoding="async" style="width:96px;height:96px;object-fit:contain">
   <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
     <a href="https://x.com/yujinamatame" target="_blank" rel="noopener" class="hv-glass-dark" style="display:inline-flex;align-items:center;gap:9px;height:52px;padding:0 24px;border-radius:var(--radius-pill);background:rgba(255,255,255,0.12);color:#fff;font-size:15px;font-weight:600;box-shadow:inset 0 0 0 1px var(--border-inverse)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>X（Twitter）</a>
     <a href="https://www.instagram.com/namanama0104?igsh=c20xNHJmYzBsOW1w" target="_blank" rel="noopener" class="hv-glass-dark" style="display:inline-flex;align-items:center;gap:9px;height:52px;padding:0 24px;border-radius:var(--radius-pill);background:rgba(255,255,255,0.12);color:#fff;font-size:15px;font-weight:600;box-shadow:inset 0 0 0 1px var(--border-inverse)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>Instagram</a>
