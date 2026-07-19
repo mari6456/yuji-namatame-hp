@@ -1,0 +1,384 @@
+---
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yuji Namatame | Studio Drummer</title>
+<meta name="description" content="スタジオドラマー・Yuji Namatame 公式サイト。プライベートレッスン、レコーディング、ライブサポート。ジャンルと規模を問わず、確かな技術でお応えします。">
+<meta property="og:title" content="Yuji Namatame | Studio Drummer">
+<meta property="og:description" content="スタジオドラマー・Yuji Namatame。プライベートレッスン、レコーディング、ライブサポート。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/uploads/IMG_3149.JPG">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style is:global>
+/* ===== Design tokens (YUJI design system, inlined for a self-contained site) ===== */
+:root{
+  /* Neutrals */
+  --white:#ffffff; --black:#000000;
+  --gray-50:#f5f5f7; --gray-100:#ececee; --gray-150:#e3e3e6; --gray-200:#d7d7dc;
+  --gray-300:#c3c3ca; --gray-400:#a2a2ab; --gray-500:#7d7d86; --gray-600:#5c5c64;
+  --gray-700:#3f3f46; --gray-800:#26262b; --gray-900:#161618; --ink:#1d1d1f;
+  /* Brand cobalt */
+  --blue-50:#eef2ff; --blue-100:#dbe3ff; --blue-200:#b8c8ff; --blue-400:#4d75ff;
+  --blue-500:#1b53ff; --blue-600:#123fe0; --blue-700:#0f34b8;
+  --red-500:#dc3838;
+  /* Semantic aliases */
+  --text-link:var(--blue-500);
+  --surface-hover:var(--gray-100);
+  --surface-glass:rgba(255,255,255,0.72);
+  --border-subtle:#ededf0; --border-default:var(--gray-200); --border-strong:var(--gray-300);
+  --border-inverse:rgba(255,255,255,0.16);
+  --accent:var(--blue-500); --accent-hover:var(--blue-600); --accent-pressed:var(--blue-700);
+  /* Type */
+  --font-sans:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  --font-mono:'Geist Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  /* Layout */
+  --container-sm:720px; --container-md:980px; --container-lg:1200px; --gutter:24px;
+  /* Radius */
+  --radius-xs:6px; --radius-sm:10px; --radius-md:14px; --radius-lg:20px; --radius-xl:28px; --radius-pill:999px;
+  /* Elevation */
+  --shadow-sm:0 1px 2px rgba(20,20,30,0.06),0 2px 6px rgba(20,20,30,0.05);
+  --shadow-md:0 2px 6px rgba(20,20,30,0.06),0 8px 20px rgba(20,20,30,0.07);
+  --shadow-lg:0 4px 12px rgba(20,20,30,0.07),0 18px 44px rgba(20,20,30,0.10);
+  --shadow-accent:0 6px 18px rgba(27,83,255,0.28);
+  /* Motion */
+  --ease-standard:cubic-bezier(0.4,0.0,0.2,1);
+  --ease-out:cubic-bezier(0.16,1,0.3,1);
+  --duration-fast:120ms;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Hanken Grotesk','Zen Kaku Gothic New',sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.eb{font-size:11.5px;font-weight:600;letter-spacing:.22em}
+.zk{font-family:'Zen Kaku Gothic New',sans-serif}
+@keyframes yjIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* ===== Interaction states (converted from the design's style-hover attributes) ===== */
+a{transition:background var(--duration-fast) var(--ease-standard),color var(--duration-fast) var(--ease-standard),box-shadow var(--duration-fast) var(--ease-standard)}
+.hv-nav-cta:hover{background:var(--accent-hover)}
+.hv-accent-btn:hover{background:var(--accent-hover);box-shadow:var(--shadow-accent)}
+.hv-glass-light:hover{background:rgba(255,255,255,.2)}
+.hv-glass-dark:hover{background:rgba(255,255,255,.14)}
+.hv-ink-btn:hover{background:#000}
+.hv-link-accent:hover{color:var(--accent-hover)}
+.hv-chip:hover{background:var(--surface-hover)}
+.hv-email:hover{color:#fff}
+.yj-flyer:hover img{transform:scale(1.035)}
+.yj-flyer img{transition:transform .5s var(--ease-out)}
+
+/* ===== Contact form ===== */
+.yj-field{display:flex;flex-direction:column;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.02em;color:var(--gray-300);text-align:left}
+.yj-field input,.yj-field select,.yj-field textarea{font-family:inherit;font-size:15px;font-weight:400;letter-spacing:0;color:var(--ink);background:#fff;border:1px solid transparent;border-radius:var(--radius-sm);padding:13px 15px;width:100%}
+.yj-field textarea{resize:vertical;min-height:124px;line-height:1.7}
+.yj-field input:focus,.yj-field select:focus,.yj-field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(27,83,255,.35)}
+.yj-field input::placeholder,.yj-field textarea::placeholder{color:var(--gray-400)}
+
+/* ===== Schedule "MORE" toggle (no-JS <details>) ===== */
+.yj-sched-more summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;height:48px;margin-top:22px;border-radius:var(--radius-pill);background:var(--gray-50);color:var(--gray-700);font-size:13.5px;font-weight:600;letter-spacing:.04em;box-shadow:inset 0 0 0 1px var(--border-default);transition:background var(--duration-fast) var(--ease-standard)}
+.yj-sched-more summary::-webkit-details-marker{display:none}
+.yj-sched-more summary:hover{background:var(--gray-100)}
+.yj-sched-more[open] summary{margin-top:0;border-top:1px solid var(--border-subtle);border-radius:0;background:transparent;box-shadow:none;color:var(--gray-500)}
+.yj-sched-more[open] summary:hover{background:var(--surface-hover)}
+.yj-sched-more .yj-more-open{display:none}
+.yj-sched-more[open] .yj-more-close{display:none}
+.yj-sched-more[open] .yj-more-open{display:inline}
+.yj-more-chev{transition:transform var(--duration-fast) var(--ease-standard)}
+.yj-sched-more[open] .yj-more-chev{transform:rotate(180deg)}
+/* per-event "詳しく見る" detail toggle */
+.yj-ev{border-top:1px solid var(--border-subtle)}
+.yj-ev>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:14px 0}
+.yj-ev>summary::-webkit-details-marker{display:none}
+.yj-ev-toggle{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 14px;border-radius:var(--radius-pill);font-size:13px;font-weight:600;color:var(--gray-700);box-shadow:inset 0 0 0 1px var(--border-default);white-space:nowrap;transition:color var(--duration-fast) var(--ease-standard),box-shadow var(--duration-fast) var(--ease-standard)}
+.yj-ev[open] .yj-ev-toggle{color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.yj-ev .yj-ev-labelclose{display:none}
+.yj-ev[open] .yj-ev-labelmore{display:none}
+.yj-ev[open] .yj-ev-labelclose{display:inline}
+.yj-ev[open] .yj-more-chev{transform:rotate(180deg)}
+.yj-ev-body{padding:2px 0 22px}
+
+/* ===== Mobile hamburger nav ===== */
+.yj-nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.yj-burger{display:none;align-items:center;justify-content:center;width:42px;height:42px;border:0;background:transparent;color:var(--ink);cursor:pointer;border-radius:var(--radius-sm)}
+.yj-burger:hover{background:var(--surface-hover)}
+.yj-burger .ic-close{display:none}
+
+@media(max-width:860px){
+ .yj-burger{display:inline-flex;margin-right:-8px}
+ #nv-links{display:none!important;position:absolute;top:64px;left:0;right:0;flex-direction:column!important;align-items:stretch!important;gap:0!important;background:var(--surface-glass);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--border-subtle);box-shadow:var(--shadow-md);padding:6px 24px 16px}
+ .yj-nav-toggle:checked ~ #nv-links{display:flex!important}
+ .yj-nav-toggle:checked ~ .yj-burger .ic-menu{display:none}
+ .yj-nav-toggle:checked ~ .yj-burger .ic-close{display:block}
+ #nv-links>a{padding:15px 2px;border-top:1px solid var(--border-subtle);font-size:15px}
+ #nv-links>a:first-child{border-top:0}
+ #nv-links>a.hv-nav-cta{margin-top:12px;justify-content:center;height:48px;border-radius:var(--radius-pill);border-top:0}
+ .yj-hero-br{display:none!important}
+ .yj-pad{padding-left:24px!important;padding-right:24px!important}
+ .yj-hero-h{font-size:38px!important}
+ .yj-hero{min-height:42vh!important}
+ .yj-hero-inner{padding-bottom:44px!important}
+ .yj-h2{font-size:30px!important}
+ .yj-2col{grid-template-columns:1fr!important;gap:36px!important}
+ .yj-3col{grid-template-columns:1fr!important;gap:40px 0!important}
+ .yj-2list{grid-template-columns:1fr!important;gap:0!important}
+ .yj-band{height:320px!important}
+ .yj-heroband{height:340px!important}
+ .yj-sec{padding-top:72px!important;padding-bottom:72px!important}
+ .yj-ctas{flex-direction:column!important}
+ .yj-ctas>*{width:100%!important;justify-content:center!important}
+ /* schedule rows: stack date on its own line, give title full width */
+ .yj-sched>div,.yj-sched-more>div,.yj-ev>summary{grid-template-columns:1fr auto!important;gap:6px 14px!important;align-items:center!important}
+ .yj-sched>div>div:first-child,.yj-sched-more>div>div:first-child,.yj-ev>summary>div:first-child{grid-column:1/-1!important;text-align:left!important;font-size:13px!important}
+ .yj-sched>div>div:first-child span,.yj-sched-more>div>div:first-child span,.yj-ev>summary>div:first-child span{display:inline!important;margin-left:8px!important}
+}
+</style>
+</head>
+<body>
+
+<div style="width:100%;overflow-x:clip;background:#fff">
+
+<nav style="position:sticky;top:0;z-index:50;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:var(--surface-glass);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--border-subtle)" class="yj-pad">
+  <a href="#top" class="zk" style="font-weight:700;font-size:18px;letter-spacing:.04em;color:var(--ink)">Yuji Namatame</a>
+  <input type="checkbox" id="nav-toggle" class="yj-nav-toggle" aria-hidden="true">
+  <label for="nav-toggle" class="yj-burger" aria-label="メニュー">
+    <svg class="ic-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M3 12h18"></path><path d="M3 18h18"></path></svg>
+    <svg class="ic-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6 18 18"></path><path d="M18 6 6 18"></path></svg>
+  </label>
+  <div id="nv-links" style="display:flex;gap:30px;align-items:center">
+    <a href="#schedule" style="font-size:14px;font-weight:500;color:var(--gray-700)">スケジュール</a>
+    <a href="#media" style="font-size:14px;font-weight:500;color:var(--gray-700)">メディア</a>
+    <a href="#services" style="font-size:14px;font-weight:500;color:var(--gray-700)">サービス</a>
+    <a href="#profile" style="font-size:14px;font-weight:500;color:var(--gray-700)">プロフィール</a>
+    <a href="#fanclub" style="font-size:14px;font-weight:500;color:var(--gray-700)">ファンクラブ</a>
+    <a href="#contact" class="hv-nav-cta" style="display:inline-flex;align-items:center;height:38px;padding:0 18px;border-radius:var(--radius-pill);background:var(--accent);color:#fff;font-size:14px;font-weight:600">お問い合わせ</a>
+  </div>
+</nav>
+
+<header id="top" class="yj-hero" style="position:relative;min-height:46vh;display:flex;align-items:flex-end;overflow:hidden;background:#0c0c10;border-top:1px solid var(--border-subtle)">
+  <img src="/uploads/IMG_3149.JPG" alt="Yuji Namatame ドラム演奏" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,12,.55) 0%,rgba(8,8,12,.05) 26%,rgba(8,8,12,.12) 52%,rgba(8,8,12,.82) 100%)"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,12,.5) 0%,rgba(8,8,12,0) 58%)"></div>
+  <div class="yj-pad yj-hero-inner" style="position:relative;width:100%;max-width:var(--container-lg);margin:0 auto;padding:0 48px 64px;animation:yjIn .85s var(--ease-out) both">
+    <h1 class="zk yj-hero-h" style="margin:0;font-weight:700;font-size:64px;line-height:1.26;letter-spacing:-.01em;color:#fff;max-width:15em;text-wrap:balance;text-shadow:0 2px 40px rgba(0,0,0,.4)">Yuji Namatame<span style="display:block;font-size:0.3em;font-weight:600;letter-spacing:.22em;color:rgba(255,255,255,.82);margin-top:.7em">OFFICIAL SITE</span></h1>
+  </div>
+</header>
+
+
+<section id="schedule" class="yj-sec yj-pad" style="padding:84px 48px;scroll-margin-top:72px">
+  <div style="margin-bottom:36px">
+    <div class="eb" style="color:var(--accent)">SCHEDULE</div>
+  </div>
+
+  <!-- 予定の追加/編集：この <div style="display:grid;grid-template-columns:auto 1fr auto;..."> ブロックを1件分としてコピーし、日付・曜日・タイトル・会場・詳細リンクを書き換えてください。詳細リンクが無い場合は最後の <a> を削除すればOK。 -->
+  <div class="yj-sched">
+    <div style="display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:14px 0;border-top:1px solid var(--border-subtle)"><div style="font-family:var(--font-mono);font-size:15px;font-weight:500;color:var(--accent);white-space:nowrap;text-align:center">2026.07.22<span style="display:block;font-size:11px;color:var(--gray-400)">WED</span></div><div><div class="zk" style="font-weight:700;font-size:17px;line-height:1.45;color:var(--ink)">純烈コンサート2026「あなたと葛根湯を飲みながら」</div><div style="margin-top:3px;font-size:13px;color:var(--gray-500)">ロームシアター京都（京都） ／ 開演 14:00・18:00</div></div><a href="https://www.junretsu.jp/schedule/list/" target="_blank" rel="noopener" class="hv-chip" style="display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 14px;border-radius:var(--radius-pill);font-size:13px;font-weight:600;color:var(--gray-700);box-shadow:inset 0 0 0 1px var(--border-default);white-space:nowrap">詳細<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a></div>
+    <div style="display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:14px 0;border-top:1px solid var(--border-subtle)"><div style="font-family:var(--font-mono);font-size:15px;font-weight:500;color:var(--accent);white-space:nowrap;text-align:center">2026.07.29<span style="display:block;font-size:11px;color:var(--gray-400)">WED</span></div><div><div class="zk" style="font-weight:700;font-size:17px;line-height:1.45;color:var(--ink)">純烈コンサート2026「あなたと葛根湯を飲みながら」</div><div style="margin-top:3px;font-size:13px;color:var(--gray-500)">高崎芸術劇場（群馬）</div></div><a href="https://www.junretsu.jp/schedule/list/" target="_blank" rel="noopener" class="hv-chip" style="display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 14px;border-radius:var(--radius-pill);font-size:13px;font-weight:600;color:var(--gray-700);box-shadow:inset 0 0 0 1px var(--border-default);white-space:nowrap">詳細<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a></div>
+    <div style="display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:14px 0;border-top:1px solid var(--border-subtle)"><div style="font-family:var(--font-mono);font-size:15px;font-weight:500;color:var(--accent);white-space:nowrap;text-align:center">2026.08.03<span style="display:block;font-size:11px;color:var(--gray-400)">MON</span></div><div><div class="zk" style="font-weight:700;font-size:17px;line-height:1.45;color:var(--ink)">高取ヒデアキ & Big Band Z</div><div style="margin-top:3px;font-size:13px;color:var(--gray-500)">新宿パンダリンダ</div></div></div>
+    <details class="yj-ev">
+      <summary><div style="font-family:var(--font-mono);font-size:15px;font-weight:500;color:var(--accent);white-space:nowrap;text-align:center">2026.08.25<span style="display:block;font-size:11px;color:var(--gray-400)">TUE</span></div><div><div class="zk" style="font-weight:700;font-size:17px;line-height:1.45;color:var(--ink)">Double A Side Live</div><div style="margin-top:3px;font-size:13px;color:var(--gray-500)">Music Bar SORA（大阪）</div></div><span class="yj-ev-toggle"><span class="yj-ev-labelmore">詳しく見る</span><span class="yj-ev-labelclose">閉じる</span><svg class="yj-more-chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></span></summary>
+      <div class="yj-ev-body"><div style="background:var(--gray-50);border-radius:var(--radius-md);padding:20px 22px"><dl style="margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 18px;font-size:13.5px;line-height:1.75"><dt style="color:var(--gray-500);font-weight:600;white-space:nowrap">時間</dt><dd style="margin:0;color:var(--gray-700)">OPEN 18:00 / START 19:00</dd><dt style="color:var(--gray-500);font-weight:600;white-space:nowrap">出演</dt><dd style="margin:0;color:var(--gray-700)">Gt 長澤トモヒロ ／ Dr 生田目勇司</dd><dt style="color:var(--gray-500);font-weight:600;white-space:nowrap">会場</dt><dd style="margin:0;color:var(--gray-700)">music bar S.O.Ra（大阪）</dd><dt style="color:var(--gray-500);font-weight:600;white-space:nowrap">その他</dt><dd style="margin:0;color:var(--gray-700)">終演後、アフターパーティー有り</dd></dl><a href="http://www.joyful-noise.net/sora/schedule/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;height:36px;margin-top:16px;padding:0 16px;border-radius:var(--radius-pill);font-size:13px;font-weight:600;color:var(--gray-700);background:#fff;box-shadow:inset 0 0 0 1px var(--border-default);text-decoration:none">会場サイト<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a></div></div>
+    </details>
+    <div style="display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:14px 0;border-top:1px solid var(--border-subtle)"><div style="font-family:var(--font-mono);font-size:15px;font-weight:500;color:var(--accent);white-space:nowrap;text-align:center">2026.09.05<span style="display:block;font-size:11px;color:var(--gray-400)">SAT</span></div><div><div class="zk" style="font-weight:700;font-size:17px;line-height:1.45;color:var(--ink)">RiO ONE MAN LIVE 2026「灯」</div><div style="margin-top:3px;font-size:13px;color:var(--gray-500)">池袋 ／ guest：yucat</div></div><a href="https://www.violin-rio.dance/" target="_blank" rel="noopener" class="hv-chip" style="display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 14px;border-radius:var(--radius-pill);font-size:13px;font-weight:600;color:var(--gray-700);box-shadow:inset 0 0 0 1px var(--border-default);white-space:nowrap">詳細<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a></div>
+    <details class="yj-sched-more">
+      <summary><span class="yj-more-close">MORE</span><span class="yj-more-open">CLOSE</span><svg class="yj-more-chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></summary>
+      <div style="display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:14px 0;border-top:1px solid var(--border-subtle)"><div style="font-family:var(--font-mono);font-size:15px;font-weight:500;color:var(--accent);white-space:nowrap;text-align:center">2026.09.07<span style="display:block;font-size:11px;color:var(--gray-400)">MON</span></div><div><div class="zk" style="font-weight:700;font-size:17px;line-height:1.45;color:var(--ink)">純烈コンサート2026「あなたと葛根湯を飲みながら」</div><div style="margin-top:3px;font-size:13px;color:var(--gray-500)">Niterra日本特殊陶業市民会館 フォレストホール（名古屋）</div></div><a href="https://www.junretsu.jp/schedule/list/" target="_blank" rel="noopener" class="hv-chip" style="display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 14px;border-radius:var(--radius-pill);font-size:13px;font-weight:600;color:var(--gray-700);box-shadow:inset 0 0 0 1px var(--border-default);white-space:nowrap">詳細<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a></div>
+      <details class="yj-ev">
+        <summary><div style="font-family:var(--font-mono);font-size:15px;font-weight:500;color:var(--accent);white-space:nowrap;text-align:center">2026.09.08<span style="display:block;font-size:11px;color:var(--gray-400)">TUE</span></div><div><div class="zk" style="font-weight:700;font-size:17px;line-height:1.45;color:var(--ink)">Double A Side Live</div><div style="margin-top:3px;font-size:13px;color:var(--gray-500)">川口 SHOCK-ON</div></div><span class="yj-ev-toggle"><span class="yj-ev-labelmore">詳しく見る</span><span class="yj-ev-labelclose">閉じる</span><svg class="yj-more-chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></span></summary>
+        <div class="yj-ev-body"><div style="background:var(--gray-50);border-radius:var(--radius-md);padding:20px 22px"><dl style="margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 18px;font-size:13.5px;line-height:1.75"><dt style="color:var(--gray-500);font-weight:600;white-space:nowrap">時間</dt><dd style="margin:0;color:var(--gray-700)">OPEN 18:00 / START 19:00</dd><dt style="color:var(--gray-500);font-weight:600;white-space:nowrap">出演</dt><dd style="margin:0;color:var(--gray-700)">Gt 長澤トモヒロ ／ Dr 生田目勇司</dd><dt style="color:var(--gray-500);font-weight:600;white-space:nowrap">Guest</dt><dd style="margin:0;color:var(--gray-700)">Vo KamaShow ／ Ba 千明大介 ／ Key 柴﨑洋輔（PENGUIN RESEARCH）</dd><dt style="color:var(--gray-500);font-weight:600;white-space:nowrap">会場</dt><dd style="margin:0;color:var(--gray-700)">川口 SHOCK-ON</dd></dl><a href="https://www.shock-on.jp/schedules/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;height:36px;margin-top:16px;padding:0 16px;border-radius:var(--radius-pill);font-size:13px;font-weight:600;color:var(--gray-700);background:#fff;box-shadow:inset 0 0 0 1px var(--border-default);text-decoration:none">会場サイト<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a></div></div>
+      </details>
+      <div style="display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:14px 0;border-top:1px solid var(--border-subtle)"><div style="font-family:var(--font-mono);font-size:15px;font-weight:500;color:var(--accent);white-space:nowrap;text-align:center">2026.09.16<span style="display:block;font-size:11px;color:var(--gray-400)">WED</span></div><div><div class="zk" style="font-weight:700;font-size:17px;line-height:1.45;color:var(--ink)">純烈コンサート2026「あなたと葛根湯を飲みながら」</div><div style="margin-top:3px;font-size:13px;color:var(--gray-500)">練馬文化センター 大ホール（東京）</div></div><a href="https://www.junretsu.jp/schedule/list/" target="_blank" rel="noopener" class="hv-chip" style="display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 14px;border-radius:var(--radius-pill);font-size:13px;font-weight:600;color:var(--gray-700);box-shadow:inset 0 0 0 1px var(--border-default);white-space:nowrap">詳細<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a></div>
+      <div style="display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:14px 0;border-top:1px solid var(--border-subtle)"><div style="font-family:var(--font-mono);font-size:15px;font-weight:500;color:var(--accent);white-space:nowrap;text-align:center">2026.09.24<span style="display:block;font-size:11px;color:var(--gray-400)">THU</span></div><div><div class="zk" style="font-weight:700;font-size:17px;line-height:1.45;color:var(--ink)">純烈コンサート2026「あなたと葛根湯を飲みながら」</div><div style="margin-top:3px;font-size:13px;color:var(--gray-500)">北とぴあ さくらホール（東京）</div></div><a href="https://www.junretsu.jp/schedule/list/" target="_blank" rel="noopener" class="hv-chip" style="display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 14px;border-radius:var(--radius-pill);font-size:13px;font-weight:600;color:var(--gray-700);box-shadow:inset 0 0 0 1px var(--border-default);white-space:nowrap">詳細<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a></div>
+      <div style="display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:14px 0;border-top:1px solid var(--border-subtle)"><div style="font-family:var(--font-mono);font-size:15px;font-weight:500;color:var(--accent);white-space:nowrap;text-align:center">2026.09.28<span style="display:block;font-size:11px;color:var(--gray-400)">MON</span></div><div><div class="zk" style="font-weight:700;font-size:17px;line-height:1.45;color:var(--ink)">純烈コンサート2026「あなたと葛根湯を飲みながら」</div><div style="margin-top:3px;font-size:13px;color:var(--gray-500)">市川市文化会館 大ホール（千葉）</div></div><a href="https://www.junretsu.jp/schedule/list/" target="_blank" rel="noopener" class="hv-chip" style="display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 14px;border-radius:var(--radius-pill);font-size:13px;font-weight:600;color:var(--gray-700);box-shadow:inset 0 0 0 1px var(--border-default);white-space:nowrap">詳細<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a></div>
+      <details class="yj-ev">
+        <summary><div style="font-family:var(--font-mono);font-size:15px;font-weight:500;color:var(--accent);white-space:nowrap;text-align:center">2026.11.21<span style="display:block;font-size:11px;color:var(--gray-400)">SAT</span></div><div><div class="zk" style="font-weight:700;font-size:17px;line-height:1.45;color:var(--ink)">ArtistSession Vol.5</div><div style="margin-top:3px;font-size:13px;color:var(--gray-500)">Rock Night!!! ／ PANDALINDA Shinjuku</div></div><span class="yj-ev-toggle"><span class="yj-ev-labelmore">詳しく見る</span><span class="yj-ev-labelclose">閉じる</span><svg class="yj-more-chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></span></summary>
+        <div class="yj-ev-body"><div style="background:var(--gray-50);border-radius:var(--radius-md);padding:20px 22px"><dl style="margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 18px;font-size:13.5px;line-height:1.75"><dt style="color:var(--gray-500);font-weight:600;white-space:nowrap">出演</dt><dd style="margin:0;color:var(--gray-700)">Vo 増倉義将 ／ Vln 松本シオン ／ Gt 平井武士 ／ Key tatsuya ／ Ba Shuse ／ Dr 生田目勇司</dd><dt style="color:var(--gray-500);font-weight:600;white-space:nowrap">会場</dt><dd style="margin:0;color:var(--gray-700)">PANDALINDA Shinjuku（西新宿1丁目13-3 西新ビルB1）</dd><dt style="color:var(--gray-500);font-weight:600;white-space:nowrap">時間</dt><dd style="margin:0;color:var(--gray-700)">OPEN 17:30 / START 18:00</dd><dt style="color:var(--gray-500);font-weight:600;white-space:nowrap">料金</dt><dd style="margin:0;color:var(--gray-700)">ADV ¥6,000 / DAY ¥6,500（別途1Drink Order）</dd></dl><a href="https://docs.google.com/forms/d/e/1FAIpQLSfqN7-RZwEOP-zlKVZy0uyuGJGGJu9KtpWeHwOc-Gj2NAPNog/viewform" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;height:36px;margin-top:16px;padding:0 16px;border-radius:var(--radius-pill);font-size:13px;font-weight:600;color:var(--gray-700);background:#fff;box-shadow:inset 0 0 0 1px var(--border-default);text-decoration:none">お申し込み<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a></div></div>
+      </details>
+    </details>
+  </div>
+  <p style="margin:20px 0 0;font-size:12.5px;line-height:1.8;color:var(--gray-400)">※ 開演時間・チケット情報などの詳細は各公演の公式ページをご確認ください。</p>
+</section>
+
+<section id="media" class="yj-sec yj-pad" style="padding:104px 48px;background:var(--gray-50);border-top:1px solid var(--border-subtle);scroll-margin-top:72px">
+  <div style="margin-bottom:40px">
+    <div class="eb" style="color:var(--accent);margin-bottom:14px">MEDIA</div>
+    <p style="margin:0;font-size:16px;line-height:1.9;color:var(--gray-600);max-width:38em">演奏・出演動画を YouTube でご覧いただけます。</p>
+  </div>
+  <div class="yj-2col" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 28px">
+    <div>
+      <div style="position:relative;aspect-ratio:16/9;border-radius:var(--radius-md);overflow:hidden;background:#000;box-shadow:var(--shadow-sm)">
+        <iframe src="https://www.youtube-nocookie.com/embed/CTEllpTpXds?rel=0" title="宇宙刑事ギャバン / 串田アキラ × 高取ヒデアキ and Big Band Z" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+      </div>
+      <p style="margin:14px 0 0;font-size:14.5px;font-weight:600;line-height:1.6;color:var(--ink)">宇宙刑事ギャバン<span style="display:block;margin-top:3px;font-weight:500;font-size:12.5px;color:var(--gray-500)">串田アキラ × 高取ヒデアキ and Big Band Z</span></p>
+    </div>
+    <div>
+      <div style="position:relative;aspect-ratio:16/9;border-radius:var(--radius-md);overflow:hidden;background:#000;box-shadow:var(--shadow-sm)">
+        <iframe src="https://www.youtube-nocookie.com/embed/NiCeS4RSP7c?rel=0" title="第25回誌上ドラム・コンテスト 弾いてみた（Crossing Legacy 2026 / Velocity Pulse 25）" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+      </div>
+      <p style="margin:14px 0 0;font-size:14.5px;font-weight:600;line-height:1.6;color:var(--ink)">第25回誌上ドラム・コンテスト 弾いてみた<span style="display:block;margin-top:3px;font-weight:500;font-size:12.5px;color:var(--gray-500)">Crossing Legacy 2026 ／ Velocity Pulse 25</span></p>
+    </div>
+    <div>
+      <div style="position:relative;aspect-ratio:16/9;border-radius:var(--radius-md);overflow:hidden;background:#000;box-shadow:var(--shadow-sm)">
+        <iframe src="https://www.youtube-nocookie.com/embed/uH7lOpPQJEQ?rel=0" title="アイドリッシュセブン Re:vale LIVE GATE「Re:flect U」スペシャルダイジェスト" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+      </div>
+      <p style="margin:14px 0 0;font-size:14.5px;font-weight:600;line-height:1.6;color:var(--ink)">アイドリッシュセブン Re:vale LIVE GATE<span style="display:block;margin-top:3px;font-weight:500;font-size:12.5px;color:var(--gray-500)">「Re:flect U」スペシャルダイジェスト</span></p>
+    </div>
+    <div>
+      <div style="position:relative;aspect-ratio:16/9;border-radius:var(--radius-md);overflow:hidden;background:#000;box-shadow:var(--shadow-sm)">
+        <iframe src="https://www.youtube-nocookie.com/embed/S9u_ibzFp8g?rel=0" title="ピアノの発表会Lv.99 / けいちゃん" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+      </div>
+      <p style="margin:14px 0 0;font-size:14.5px;font-weight:600;line-height:1.6;color:var(--ink)">ピアノの発表会 Lv.99<span style="display:block;margin-top:3px;font-weight:500;font-size:12.5px;color:var(--gray-500)">けいちゃん / Keichan</span></p>
+    </div>
+  </div>
+  <div style="margin-top:64px;padding-top:48px;border-top:1px solid var(--border-subtle)">
+    <div class="eb" style="color:var(--accent);margin-bottom:16px">RECORDING WORKS</div>
+    <h3 class="zk" style="margin:0 0 6px;font-weight:700;font-size:22px;line-height:1.4;color:var(--ink)">Studio OTO レコーディング実績</h3>
+    <p style="margin:0 0 28px;font-size:13.5px;line-height:1.8;color:var(--gray-500)">自宅スタジオ「Studio OTO」でレコーディング参加した作品の一部です。</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:30px 24px">
+      <a href="https://music.apple.com/jp/album/1760270392" target="_blank" rel="noopener" style="display:block;text-decoration:none">
+        <div style="aspect-ratio:1/1;overflow:hidden;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);background:var(--gray-100)"><img src="/uploads/jk_dejavu.jpg" alt="純烈「デジャビュ」（アルバム『純烈魂 1』）ジャケット" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div class="zk" style="margin-top:12px;font-weight:700;font-size:14.5px;line-height:1.45;color:var(--ink)">デジャビュ</div>
+        <div style="margin-top:3px;font-size:12.5px;line-height:1.5;color:var(--gray-500)">純烈『純烈魂 1』／作曲：高取ヒデアキ</div>
+        <div style="margin-top:7px;display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:600;color:var(--accent)">Apple Music<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></div>
+      </a>
+      <a href="https://music.apple.com/jp/album/1830951207" target="_blank" rel="noopener" style="display:block;text-decoration:none">
+        <div style="aspect-ratio:1/1;overflow:hidden;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);background:var(--gray-100)"><img src="/uploads/jk_kage.jpg" alt="影を連れて ジャケット" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div class="zk" style="margin-top:12px;font-weight:700;font-size:14.5px;line-height:1.45;color:var(--ink)">影を連れて</div>
+        <div style="margin-top:3px;font-size:12.5px;line-height:1.5;color:var(--gray-500)">ゴジュウウルフ・遠野吠（冬野心央）</div>
+        <div style="margin-top:7px;display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:600;color:var(--accent)">Apple Music<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></div>
+      </a>
+      <a href="https://music.apple.com/jp/album/paya-paya-full-of-love-single/6773220616" target="_blank" rel="noopener" style="display:block;text-decoration:none">
+        <div style="aspect-ratio:1/1;overflow:hidden;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);background:var(--gray-100)"><img src="/uploads/jk_payapaya.jpg" alt="愛されてパヤパヤ ジャケット" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div class="zk" style="margin-top:12px;font-weight:700;font-size:14.5px;line-height:1.45;color:var(--ink)">愛されてパヤパヤ</div>
+        <div style="margin-top:3px;font-size:12.5px;line-height:1.5;color:var(--gray-500)">ののちゃん（村方乃々佳）</div>
+        <div style="margin-top:7px;display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:600;color:var(--accent)">Apple Music<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></div>
+      </a>
+      <a href="https://music.apple.com/jp/artist/338068686" target="_blank" rel="noopener" style="display:block;text-decoration:none">
+        <div style="aspect-ratio:1/1;overflow:hidden;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);background:var(--gray-100)"><img src="/uploads/jk_neko.jpg" alt="猫といる暮らし ジャケット" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div class="zk" style="margin-top:12px;font-weight:700;font-size:14.5px;line-height:1.45;color:var(--ink)">猫といる暮らし</div>
+        <div style="margin-top:3px;font-size:12.5px;line-height:1.5;color:var(--gray-500)">天野月（アコースティックアルバム）</div>
+        <div style="margin-top:7px;display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:600;color:var(--accent)">Apple Music<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></div>
+      </a>
+    </div>
+    <p style="margin:22px 0 0;font-size:12px;line-height:1.7;color:var(--gray-400)">※ 各ジャケットから Apple Music の配信ページへ移動します。</p>
+  </div>
+</section>
+
+<section id="services" class="yj-sec yj-pad" style="padding:104px 48px;text-align:center;border-top:1px solid var(--border-subtle);scroll-margin-top:72px">
+  <div class="eb" style="color:var(--accent);margin-bottom:48px">SERVICES</div>
+  <div class="yj-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:48px;text-align:left">
+    <div style="display:flex;flex-direction:column">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;height:96px;margin-bottom:20px"><img src="/uploads/lp_material_07.webp" alt="スネアドラム" style="height:84px;width:auto;object-fit:contain;filter:drop-shadow(0 12px 16px rgba(20,22,30,.12))"></div>
+      <h3 class="zk" style="margin:0 0 10px;font-weight:700;font-size:21px;color:var(--ink)">プライベートレッスン</h3>
+      <p style="margin:0 0 22px;font-size:14.5px;line-height:1.9;color:var(--gray-600)">課題・目的に合わせた完全個別レッスン。基礎技術・グルーヴ・演奏フォームの改善から、身体に負担の少ない脱力奏法まで。初心者〜プロ志向、レベル不問。対面（東京都内・神奈川）／オンライン（Zoom）に対応します。</p>
+      <div style="margin-top:auto;padding-top:20px;border-top:1px solid var(--border-subtle)">
+        <a href="https://ttbac1rxbrqujh0vreqv.stores.jp/items/69c369448c0c273b179501d9" target="_blank" rel="noopener" class="hv-accent-btn" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;height:46px;border-radius:var(--radius-pill);background:var(--accent);color:#fff;font-size:14px;font-weight:600">レッスンを予約する（STORES）<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;height:96px;margin-bottom:20px"><img src="/uploads/lp_material_03.webp" alt="コンデンサーマイク" style="height:96px;width:auto;object-fit:contain;filter:drop-shadow(0 12px 16px rgba(20,22,30,.12))"></div>
+      <h3 class="zk" style="margin:0 0 10px;font-weight:700;font-size:21px;color:var(--ink)">レコーディング</h3>
+      <p style="margin:0 0 22px;font-size:14.5px;line-height:1.9;color:var(--gray-600)">16ch録音対応の自宅スタジオによる高音質宅録。ポップス、ロック、ジャズ、フュージョン、ムード歌謡まで幅広く対応します。ベースやギターとの同時録音も可能。</p>
+      <div style="margin-top:auto;aspect-ratio:16/10;overflow:hidden;border-radius:var(--radius-sm);box-shadow:var(--shadow-sm)"><img src="/uploads/studio_oto.jpg" alt="自宅スタジオ Studio OTO のレコーディング環境" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;height:96px;margin-bottom:20px"><img src="/uploads/cymbal_china.webp" alt="シンバル" style="height:80px;width:auto;object-fit:contain;filter:drop-shadow(0 12px 16px rgba(20,22,30,.12))"></div>
+      <h3 class="zk" style="margin:0 0 10px;font-weight:700;font-size:21px;color:var(--ink)">ライブサポート</h3>
+      <p style="margin:0 0 22px;font-size:14.5px;line-height:1.9;color:var(--gray-600)">アコースティックからアリーナ規模まで柔軟に対応。規模の大小を問わず、まずはご相談ください。リハーサルから当日サポート、ツアー帯同まで。</p>
+      <div style="margin-top:auto;aspect-ratio:16/10;overflow:hidden;border-radius:var(--radius-sm);box-shadow:var(--shadow-sm)"><img src="/uploads/04_junretsu_kawagoe_1.jpg" alt="純烈 全国ツアー ステージ" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    </div>
+  </div>
+</section>
+
+<section id="profile" class="yj-sec yj-pad" style="padding:104px 48px;background:var(--gray-50);border-top:1px solid var(--border-subtle);scroll-margin-top:72px">
+  <div style="max-width:860px;margin:0 auto">
+    <div class="eb" style="color:var(--accent);margin-bottom:20px">PROFILE</div>
+    <h2 class="zk" style="margin:0 0 6px;font-weight:700;font-size:36px;line-height:1.3;color:var(--ink)">生田目勇司</h2>
+    <p style="margin:0 0 36px;font-family:var(--font-mono);font-size:13.5px;letter-spacing:.04em;color:var(--gray-500)">Yuji Namatame ／ 1990.01.04</p>
+    <p style="margin:0 0 44px;font-size:16px;line-height:2.15;color:var(--gray-700)">ドラムを井上賢治氏、熊谷徳明氏（TRIX）に師事。10歳からドラムを始める。2009年、音楽学校メーザーハウスに入学。卒業後はメジャー・インディーズを問わず様々なミュージシャンのレコーディングやツアーに参加。2019年以降、「高取ヒデアキ＆Big Band Z（ZETKI）」に加入し、数々の特撮ソングに参加。同YouTubeチャンネルは2026年7月にチャンネル登録者数8万人を突破した。2021年よりプライベートスタジオ「Studio OTO」をオープン。Pro Toolsによる16chでのスタジオ・レコーディングに対応している。2025年よりYAMAHA Drumsエンドーサー。</p>
+    <div class="yj-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:40px 56px;padding-top:38px;border-top:1px solid var(--border-subtle)">
+      <div>
+        <div class="eb" style="color:var(--accent);margin-bottom:18px">近年の主な活動</div>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px">
+          <li style="position:relative;padding-left:20px;font-size:15px;line-height:1.85;color:var(--gray-700)"><span style="position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--accent)"></span>2022年より、ムード歌謡グループ「純烈」の全国ツアーに参加。</li>
+          <li style="position:relative;padding-left:20px;font-size:15px;line-height:1.85;color:var(--gray-700)"><span style="position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--accent)"></span>2024年、Kアリーナで行われた「KING SUPER LIVE 2024」にハウスバンドとして参加。2日間で計100曲のライブを完遂する。</li>
+          <li style="position:relative;padding-left:20px;font-size:15px;line-height:1.85;color:var(--gray-700)"><span style="position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--accent)"></span>2025年、声優・松本梨香（『ポケットモンスター』サトシ役ほか）の40周年ライブに参加。</li>
+        </ul>
+      </div>
+      <div>
+        <div class="eb" style="color:var(--accent);margin-bottom:6px">主な Live / Rec 参加</div>
+        <p style="margin:0 0 12px;font-size:12px;color:var(--gray-400)">敬称略・順不同</p>
+        <p style="margin:0;font-size:14px;line-height:2;color:var(--gray-700)">純烈・天野月・けいちゃん・アイドリッシュセブン・モナキ・JELEE・和田雅成・ROF-MAO・前島亜美・カノエラナ・センチミリメンタル・RiO・ウマ娘・ナノ・春奈るな・ハラミちゃん・虹のコンキスタドール・ナナシス・上坂すみれ・水瀬いのり・水木一郎・松本梨香・小倉唯・渕上舞・コロプラフェス・ダイスケ・神谷浩史&小野大輔DGS・KING SUPER LIVE 2024／2017（ハウスバンド）　etc...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fanclub" class="yj-sec yj-pad" style="padding:84px 48px;border-top:1px solid var(--border-subtle);scroll-margin-top:72px">
+  <div style="max-width:var(--container-md);margin:0 auto;background:var(--ink);color:#fff;border-radius:var(--radius-xl);padding:56px 44px;text-align:center">
+    <div class="eb" style="color:var(--blue-200);margin-bottom:18px">FAN CLUB</div>
+    <h2 class="zk" style="margin:0 0 6px;font-weight:700;font-size:34px;line-height:1.3;color:#fff">なまおとFC</h2>
+    <p style="margin:0 0 30px;font-size:14px;color:var(--gray-400)">生田目勇司 ファンクラブ ／ presented by Studio OTO</p>
+    <div class="yj-2col" style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px 36px;max-width:660px;margin:0 auto 34px;text-align:left">
+      <div style="position:relative;padding-left:28px;font-size:14.5px;line-height:1.7;color:var(--gray-300)"><svg style="position:absolute;left:0;top:3px" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--blue-400)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>クローズドなLINEオープンチャットへご招待</div>
+      <div style="position:relative;padding-left:28px;font-size:14.5px;line-height:1.7;color:var(--gray-300)"><svg style="position:absolute;left:0;top:3px" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--blue-400)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>メンバー限定の配信LIVEにご招待</div>
+      <div style="position:relative;padding-left:28px;font-size:14.5px;line-height:1.7;color:var(--gray-300)"><svg style="position:absolute;left:0;top:3px" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--blue-400)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>特別な会員証データをプレゼント（主催ライブにて順次お渡し）</div>
+      <div style="position:relative;padding-left:28px;font-size:14.5px;line-height:1.7;color:var(--gray-300)"><svg style="position:absolute;left:0;top:3px" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--blue-400)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>限定コンテンツ（“ぼやき”配信・限定オフ会のご案内 ほか）</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:20px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:13px;color:var(--gray-400)">月額</span><span class="zk" style="font-weight:700;font-size:30px;color:#fff">990<span style="font-size:15px;font-weight:600">円（税込）</span></span></div>
+      <a href="https://creatingstudio.my.canva.site/studiooto" target="_blank" rel="noopener" class="hv-accent-btn" style="display:inline-flex;align-items:center;gap:9px;height:54px;padding:0 34px;border-radius:var(--radius-pill);background:var(--accent);color:#fff;font-size:16px;font-weight:600">入会・詳細はこちら<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="yj-sec yj-pad" style="padding:112px 48px;text-align:center;background:var(--ink);color:#fff;scroll-margin-top:72px">
+  <div class="eb" style="color:var(--blue-200);margin-bottom:24px">CONTACT</div>
+  <h2 class="zk yj-h2" style="margin:0 0 20px;font-weight:700;font-size:44px;line-height:1.38;letter-spacing:-.005em;color:#fff">お気軽に、ご相談ください。</h2>
+  <p style="margin:0 auto 44px;font-size:17.5px;line-height:2;color:var(--gray-300);max-width:34em">レッスン・レコーディング・ライブサポートのご依頼は、下記フォームからお気軽にどうぞ。規模やジャンルを問わず柔軟に対応します。</p>
+  <form id="contact-form" style="max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:18px">
+    <!-- ▼ Web3Forms のアクセスキー（無料）を取得して下記 value に貼り付けてください（web3forms.com でメール登録→キー発行）。それまでは送信できません。 -->
+    <input type="hidden" name="access_key" value="PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+    <input type="hidden" name="subject" value="【公式サイト】お問い合わせ">
+    <input type="hidden" name="from_name" value="Yuji Namatame Official Site">
+    <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+    <div class="yj-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+      <label class="yj-field">お名前<input type="text" name="name" required placeholder="山田 太郎"></label>
+      <label class="yj-field">メールアドレス<input type="email" name="email" required placeholder="you@example.com"></label>
+    </div>
+    <label class="yj-field">ご相談の種別
+      <select name="type">
+        <option value="プライベートレッスン">プライベートレッスン</option>
+        <option value="レコーディング">レコーディング</option>
+        <option value="ライブサポート">ライブサポート</option>
+        <option value="その他">その他</option>
+      </select>
+    </label>
+    <label class="yj-field">メッセージ<textarea name="message" required placeholder="ご相談内容・ご希望の日程・規模などをお書きください。"></textarea></label>
+    <button type="submit" id="contact-submit" class="hv-accent-btn" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 30px;border-radius:var(--radius-pill);background:var(--accent);color:#fff;font-size:16px;font-weight:600;border:0;cursor:pointer">送信する<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+    <p id="contact-result" role="status" style="display:none;margin:4px 0 0;font-size:14.5px;line-height:1.7"></p>
+  </form>
+</section>
+
+<footer id="follow" class="yj-pad" style="padding:64px 48px 46px;background:var(--ink);border-top:1px solid var(--border-inverse);display:flex;flex-direction:column;align-items:center;gap:26px;scroll-margin-top:72px">
+  <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+    <a href="https://x.com/yujinamatame" target="_blank" rel="noopener" class="hv-glass-dark" style="display:inline-flex;align-items:center;gap:9px;height:52px;padding:0 24px;border-radius:var(--radius-pill);background:rgba(255,255,255,0.12);color:#fff;font-size:15px;font-weight:600;box-shadow:inset 0 0 0 1px var(--border-inverse)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>X（Twitter）</a>
+    <a href="https://www.instagram.com/namanama0104?igsh=c20xNHJmYzBsOW1w" target="_blank" rel="noopener" class="hv-glass-dark" style="display:inline-flex;align-items:center;gap:9px;height:52px;padding:0 24px;border-radius:var(--radius-pill);background:rgba(255,255,255,0.12);color:#fff;font-size:15px;font-weight:600;box-shadow:inset 0 0 0 1px var(--border-inverse)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>Instagram</a>
+    <a href="https://www.youtube.com/@yujinamatamedrumchannel3473" target="_blank" rel="noopener" class="hv-glass-dark" style="display:inline-flex;align-items:center;gap:9px;height:52px;padding:0 24px;border-radius:var(--radius-pill);background:rgba(255,255,255,0.12);color:#fff;font-size:15px;font-weight:600;box-shadow:inset 0 0 0 1px var(--border-inverse)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>YouTube</a>
+    <a href="https://note.com/yujinamatame" target="_blank" rel="noopener" class="hv-glass-dark" style="display:inline-flex;align-items:center;gap:9px;height:52px;padding:0 24px;border-radius:var(--radius-pill);background:rgba(255,255,255,0.12);color:#fff;font-size:15px;font-weight:600;box-shadow:inset 0 0 0 1px var(--border-inverse)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 15.5v-7l8 7v-7"></path></svg>note</a>
+  </div>
+  <span style="font-family:var(--font-mono);font-size:12px;color:var(--gray-600);margin-top:6px">© 2026 Studio Oto</span>
+</footer>
+
+</div>
+
+<script is:inline src="/contact.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# env
+.env
+.env.production
+.vercel
+
+# os / editor
+.DS_Store
+*.log
+
+# 元HTMLのバックアップ・素材（デプロイ不要なら無視。コピーは public/uploads にあります）
+_backup/
+そざい/
+ジャケット/
+/index.html
+/*.PNG
+/*.JPG
+/*.jpg
+/*.jpeg
+
+# Claude Code local config
+.claude/

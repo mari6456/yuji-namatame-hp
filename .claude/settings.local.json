@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p uploads)",
+      "Bash(cp \"04_junretsu_kawagoe_1.jpg\" \"07_amanozuki_live.jpg\" uploads/)",
+      "Bash(cp \"そざい/lp_material_03.webp\" \"そざい/lp_material_11.webp\" \"そざい/lp_material_12.webp\" uploads/)",
+      "Bash(cd \"/Users/mari/Library/Mobile Documents/com~apple~CloudDocs/FAMILY\" *)",
+      "Bash(cp \"ファンクラブ/IMG_3149.JPG\" \"HP/uploads/IMG_3149.JPG\")",
+      "Bash(cp \"ファンクラブ/IMG_3150.JPG\" \"HP/uploads/IMG_3150.JPG\")",
+      "Bash(cp \"ファンクラブ/IMG_3151.JPG\" \"HP/uploads/IMG_3151.JPG\")",
+      "Bash(cp \"ファンクラブ/IMG_3153.JPG\" \"HP/uploads/IMG_3153.JPG\")",
+      "Bash(cp \"フライヤー/20230108/IMG_3216.JPG\" \"HP/uploads/IMG_3216.JPG\")",
+      "Bash(command -v python3)",
+      "Bash(command -v npx)",
+      "Bash(command -v node)",
+      "Bash(pkill -f \"http.server 8899\")",
+      "WebFetch(domain:syndication.twitter.com)",
+      "Bash(python3 -m http.server 8899)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8899/index.html)",
+      "mcp__claude-in-chrome__list_connected_browsers",
+      "mcp__claude-in-chrome__select_browser",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__javascript_tool",
+      "mcp__claude-in-chrome__computer",
+      "Bash(cd \"/Users/mari/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/1e276084-c43b-4d72-9613-da8ceab1f09a/1537d351-ee1d-4a71-90a9-6155c1a9dd02/skills/pro-lp-builder\" && ls -R references | head -40 && echo \"=== template line count ===\" && wc -l references/lp-template.astro)",
+      "Bash(awk -F: '$1<17 || $1>92 {print}')",
+      "Bash(ln -sf '/Users/mari/Library/Mobile Documents/com~apple~CloudDocs/FAMILY/3.勇司🥁/HP/uploads' /private/tmp/claude-501/-Users-mari-Library-Mobile-Documents-com-apple-CloudDocs-FAMILY-3------HP/e9889c5f-c27d-42bd-bfd4-eecb16092988/scratchpad/yuji-astro/public/uploads)",
+      "Bash(perl -i -pe 's/content=\"uploads\\\\//content=\"\\\\/uploads\\\\//g;' /private/tmp/claude-501/-Users-mari-Library-Mobile-Documents-com-apple-CloudDocs-FAMILY-3------HP/e9889c5f-c27d-42bd-bfd4-eecb16092988/scratchpad/yuji-astro/src/pages/index.astro)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(pkill -f \"http.server 8901\")",
+      "Bash(exit 1)",
+      "Bash(mv uploads *)",
+      "Bash(ln -sfn '/Users/mari/Library/Mobile Documents/com~apple~CloudDocs/FAMILY/3.勇司🥁/HP/public/uploads' /private/tmp/claude-501/-Users-mari-Library-Mobile-Documents-com-apple-CloudDocs-FAMILY-3------HP/e9889c5f-c27d-42bd-bfd4-eecb16092988/scratchpad/yuji-astro/public/uploads)",
+      "Read(//private/tmp/claude-501/-Users-mari-Library-Mobile-Documents-com-apple-CloudDocs-FAMILY-3------HP/e9889c5f-c27d-42bd-bfd4-eecb16092988/scratchpad/yuji-astro/public/**)"
+    ]
+  }
+}

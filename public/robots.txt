@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# 本番ドメインが決まったら下記を差し替え
+Sitemap: https://example.com/sitemap-index.xml
