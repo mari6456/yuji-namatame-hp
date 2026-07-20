@@ -23,7 +23,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Geist+Mono:wght@400;500&family=Shippori+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style is:global>
 /* ===== Design tokens (YUJI design system, inlined for a self-contained site) ===== */
@@ -149,6 +149,10 @@ a{transition:background var(--duration-fast) var(--ease-standard),color var(--du
  .yj-sched>div>div:first-child span,.yj-sched-more>div>div:first-child span,.yj-ev>summary>div:first-child span{display:inline!important;margin-left:8px!important}
 }
 
+/* ===== DEMO: serif font override ===== */
+body{font-family:'Cormorant Garamond','Shippori Mincho',serif!important}
+.zk{font-family:'Shippori Mincho',serif!important}
+:root{--font-sans:'Cormorant Garamond','Shippori Mincho',serif}
 /* ===== DEMO: warm accent override ===== */
 :root{--accent:#c65a24;--accent-hover:#a94a1c;--accent-pressed:#8a3c15;--text-link:#c65a24;--shadow-accent:0 6px 18px rgba(198,90,36,.28);--blue-200:#f2c9ad;--blue-400:#e0955f}
 </style>
