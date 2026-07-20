@@ -6,5 +6,5 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'never',
   build: { format: 'directory', inlineStylesheets: 'auto' },
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: (page) => !page.includes('/demo') })],
 });
